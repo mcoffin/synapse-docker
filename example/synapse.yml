@@ -1,0 +1,20 @@
+---
+haproxy:
+  global:
+    - stats socket /var/run/haproxy.sock
+  defaults:
+    - balance roundrobin
+services:
+  github:
+    discovery:
+      method: dns
+      nameserver: 8.8.8.8
+      servers:
+        - host: github.com
+          port: 443
+    haproxy:
+      port: 3219
+      frontend:
+        - mode tcp
+      backend:
+        - mode tcp
