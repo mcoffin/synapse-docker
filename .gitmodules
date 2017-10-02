@@ -1,0 +1,4 @@
+[submodule "synapse"]
+	path = synapse
+	url = git://github.com/mcoffin/synapse.git
+	branch = marathon-cni
