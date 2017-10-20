@@ -2,6 +2,7 @@
 haproxy:
   global:
     - stats socket /var/run/haproxy.sock
+      #socket_file_path: /var/run/haproxy.sock
   defaults:
     - balance roundrobin
 services:

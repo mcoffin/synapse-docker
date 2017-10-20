@@ -13,6 +13,7 @@ WORKDIR /
 RUN mkdir -p /etc/smartstack/synapse
 RUN rm /etc/haproxy/haproxy.cfg
 
+COPY exit-event-listener.py /usr/local/bin/exit-event-listener.py
 COPY docker-entrypoint.py /docker-entrypoint.py
 COPY supervisord.conf /etc/supervisord.conf
 
